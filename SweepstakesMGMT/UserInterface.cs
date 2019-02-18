@@ -7,5 +7,9 @@ namespace SweepstakesMGMT
 {
     public interface UserInterface
     {
+        public static string GetFirstName()
+        {
+
+        }
     }
 }

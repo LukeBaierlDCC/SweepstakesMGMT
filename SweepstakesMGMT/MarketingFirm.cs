@@ -7,12 +7,8 @@ namespace SweepstakesMGMT
 {
     public class MarketingFirm
     {
-        public Contestant Contestant
-        {
-            get => default(Contestant);
-            set
-            {
-            }
-        }
+        public Contestant
+        //Implement dependency injectionto utilize sweepstakes manager.
+        
     }
 }

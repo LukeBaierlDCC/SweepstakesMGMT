@@ -5,49 +5,54 @@ using System.Text;
 
 namespace SweepstakesMGMT
 {
-    public interface UserInterface
+    public static class UserInterface
     {
 
-        string UserInterface.GetFirstName()
+        public static string GetFirstName()
         {
             Console.WriteLine("Enter the contestant's first name here: ");
             return Console.ReadLine();
         }
 
-        string GetLastName()
+        public static string GetLastName()
         {
             Console.WriteLine("Enter the contestant's last name here: ");
             return Console.ReadLine();
         }
 
-        string GetEmailAddress()
+        public static string GetEmailAddress()
         {
             Console.WriteLine("Enter the contestant's email address here: ");
             return Console.ReadLine();
         }
 
-        string GetRegistrationNumber()
+        public static string GetRegistrationNumber()
         {
             Console.WriteLine("Enter the contestant's registration number here: ");
             return Console.ReadLine();
         }
 
-        string GetManagerType()
+        public static string GetManagerType()
         {
             string managerType = GetUserInput("");
             return managerType;
         }
 
-        _Sweepstakes CreateSweepstakes()
+        private static string GetUserInput(string v)
         {
-            _Sweepstakes newSweepstakes = new _Sweepstakes();
-            return newSweepstakes;
+            throw new NotImplementedException();
         }
 
-        string DetermineMarketingFirmAction()
-        {
-            userInput = GetUserInput("");
-            return userInput;
-        }
+        //public static CreateSweepstakes()
+        //{
+        //    _Sweepstakes newSweepstakes = new _Sweepstakes();
+        //    return newSweepstakes;
+        //}
+
+        //public static string DetermineMarketingFirmAction()
+        //{
+        //    userInput = GetUserInput("");
+        //    return userInput;
+        //}
     }
 }

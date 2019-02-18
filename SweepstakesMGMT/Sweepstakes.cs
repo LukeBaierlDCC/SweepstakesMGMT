@@ -26,6 +26,10 @@ namespace SweepstakesMGMT
             contestantCount = 0;
         }
 
+        public _Sweepstakes()
+        {
+        }
+
         public Contestant CreateContestant()
         {
             string firstName = Userinterface.GetFirstName();

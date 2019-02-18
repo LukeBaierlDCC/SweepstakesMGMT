@@ -12,25 +12,33 @@ namespace SweepstakesMGMT
         int PrintContestantInfo;
         public ISweepstakesManager ()//ISweepstakesManager
         {
-            Sweepstakes(string name) 
-            {
+            Dictionary<int, string> dictionary = new Dictionary<int, string>();
+            //dictionary.Add();
 
+            foreach (KeyValuePair<int, string> kvp in dictionary)
+            {
+                Console.WriteLine(kvp.Key.ToString() + " - " + kvp.Value.ToString());
             }
 
-            void RegisterContestant(Contestant contestant)
-            {
+            //Sweepstakes(string name) 
+            //{
 
-            }
+            //}
 
-            string PickWinner()
-            {
+            //void RegisterContestant(Contestant contestant)
+            //{
 
-            }
+            //}
 
-            void PrintContestantInfo(Contestant contestant)
-            {
+            //string PickWinner()
+            //{
 
-            }
+            //}
+
+            //void PrintContestantInfo(Contestant contestant)
+            //{
+
+            //}
 
         }
     }

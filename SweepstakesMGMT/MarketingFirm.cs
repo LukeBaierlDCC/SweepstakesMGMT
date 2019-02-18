@@ -22,14 +22,19 @@ namespace SweepstakesMGMT
 
         public void InsertSweepstakes()
         {
-            sweepstakesManager.InsertSweepstakes(UserInterface.CreateSweepstakes());
+            sweepstakesManager.InsertSweepstakes(CreateSweepstakes());
+        }
+
+        private Sweepstakes CreateSweepstakes()
+        {
+            throw new NotImplementedException();
         }
 
         public void DetermineMarketFirmAction()
         {
             while (true)
             {
-                switch (UserInterface.DetermineMarketingFirmAction())
+                switch (DetermineMarketingFirmAction())
                 {
                     case "1":
                         GetSweepstakes();
@@ -47,6 +52,11 @@ namespace SweepstakesMGMT
                         break;
                 }
             }
+        }
+
+        private string DetermineMarketingFirmAction()
+        {
+            throw new NotImplementedException();
         }
     }
 }

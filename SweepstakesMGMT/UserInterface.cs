@@ -32,6 +32,12 @@ namespace SweepstakesMGMT
             return Console.ReadLine();
         }
 
+        public static Sweepstakes CreateSweepstakes()
+        {
+            Sweepstakes newSweepstakes = new Sweepstakes();
+            return newSweepstakes;
+        }
+
         public static string DetermineMarketingFirmAction()
         {
             string userInput = GetUserInput("");

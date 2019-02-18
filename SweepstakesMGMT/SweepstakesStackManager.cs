@@ -13,5 +13,9 @@ namespace SweepstakesMGMT
             sweepstakesStack.Push(sweepstakes);
         }
 
+        public Sweepstakes GetSweepstakes()
+        {
+            return sweepstakesStack.Pop();
+        }
     }
 }

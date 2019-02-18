@@ -10,9 +10,10 @@ namespace SweepstakesMGMT
         int RegisterContestant;
         int PickWinner;
         int PrintContestantInfo;
-        public ISweepstakesManager ()//ISweepstakesManager
+        public ISweepstakesManager()//ISweepstakesManager
         {
             Dictionary<int, string> dictionary = new Dictionary<int, string>();
+        }
             public string sweepstakesName;
 
             private object UserInterface;
@@ -35,6 +36,11 @@ namespace SweepstakesMGMT
             {
                 string firstName = UserInterface.GetFirstName();
                 string lastName = UserInterface.GetLastName();
+                string emailAddress = UserInterface.GetEmailAddress();
+                contestantCount++;
+
+                Contestant contestant = new Contestant(firstName, lastName, emailAddress, contestantCount);
+                return contestant;
             }
 
             //void RegisterContestant(Contestant contestant)
@@ -52,6 +58,5 @@ namespace SweepstakesMGMT
 
             //}
 
-        }
     }
 }

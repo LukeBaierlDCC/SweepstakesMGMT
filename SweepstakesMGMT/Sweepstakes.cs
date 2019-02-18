@@ -7,15 +7,30 @@ namespace SweepstakesMGMT
 {
     public class Sweepstakes
     {
-        public ISweepstakesManager //ISweepstakesManager
+        int RegisterContestant;
+        int PickWinner;
+        int PrintContestantInfo;
+        public ISweepstakesManager ()//ISweepstakesManager
         {
-            //Sweepstakes(string name)
+            Sweepstakes(string name) 
+            {
 
-            //void RegisterContestant(Contestant contestant)
+            }
 
-            //string PickWinner()
+            void RegisterContestant(Contestant contestant)
+            {
 
-            //void PrintContestantInfo(Contestant contestant)
+            }
+
+            string PickWinner()
+            {
+
+            }
+
+            void PrintContestantInfo(Contestant contestant)
+            {
+
+            }
 
         }
     }

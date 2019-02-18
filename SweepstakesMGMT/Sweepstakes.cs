@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dictionary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,26 +11,21 @@ namespace SweepstakesMGMT
         int RegisterContestant;
         int PickWinner;
         int PrintContestantInfo;
-        public ISweepstakesManager()//ISweepstakesManager
+        public ISweepstakesManager ISweepstakesManager
         {
             Dictionary<int, string> dictionary = new Dictionary<int, string>();
-        }
+            
             public string sweepstakesName;
-
+            private Random random;
             private object UserInterface;
             private object contestants;
             int contestantCount;
-            //dictionary.Add();
-
-            //foreach (KeyValuePair<int, string> kvp in dictionary)
-            //{
-            //    Console.WriteLine(kvp.Key.ToString() + " - " + kvp.Value.ToString());
-            //}
-
+               
+            
             public Sweepstakes(string sweepstakesName)
             {
                 this.sweepstakesName = sweepstakesName;
-                
+                random = new Random();
                 contestantCount = 0;
             }
 

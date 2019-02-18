@@ -1,5 +1,4 @@
-﻿using dictionary;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,55 +10,54 @@ namespace SweepstakesMGMT
         int RegisterContestant;
         int PickWinner;
         int PrintContestantInfo;
-        public ISweepstakesManager ISweepstakesManager
-        {
-            Dictionary<int, string> dictionary = new Dictionary<int, string>();
+        
+        Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
             
-            public string sweepstakesName;
-            private Random random;
-            private object UserInterface;
-            private object contestants;
-            int contestantCount;
+        public string sweepstakesName;
+        Random random;
+        private object UserInterface;
+        //int contestants;
+        int contestantCount;
                
             
-            public Sweepstakes(string sweepstakesName)
-            {
-                this.sweepstakesName = sweepstakesName;
-                random = new Random();
-                contestantCount = 0;
-            }
+        public Sweepstakes(string sweepstakesName)
+        {
+            this.sweepstakesName = sweepstakesName;
+            random = new Random();
+            contestantCount = 0;
+        }
 
-            public Contestant CreateContestant()
-            {
-                string firstName = UserInterface.GetFirstName();
-                string lastName = UserInterface.GetLastName();
-                string emailAddress = UserInterface.GetEmailAddress();
-                contestantCount++;
+        public Contestant CreateContestant()
+        {
+            string firstName = UserInterface.GetFirstName();
+            string lastName = UserInterface.GetLastName();
+            string emailAddress = UserInterface.GetEmailAddress();
+            contestantCount++;
 
-                Contestant contestant = new Contestant(firstName, lastName, emailAddress, contestantCount);
-                return contestant;
-            }
+            Contestant contestant = new Contestant(firstName, lastName, emailAddress, contestantCount);
+            return contestant;
+        }
 
-            private void RegisterContestant(Contestant contestant)
-            {
-                contestants.Add(contestant.registrationNumber, contestant);
-            }
+        public void RegisterContestant(Contestant contestant)
+        {
+            contestants.Add(contestant.registrationNumber, contestant);
+        }
 
-            public string PickWinner()
-            {
-                int winningContestant = random.Next(1, contestantCount);
-                Contestant contestant;
-                contestants.TryGetValue(winningContestant, out contestant);
-                return $"{contestant.firstName} {contestant.lastName}";
-            }
+        public string PickWinner()
+        {
+            int winningContestant = random.Next(1, contestantCount);
+            Contestant contestant;
+            contestants.TryGetValue(winningContestant, out contestant);
+            return $"{contestant.firstName} {contestant.lastName}";
+        }
 
-            public void PrintContestantInfo(Contestant contestant)
+        public void PrintContestantInfo(Contestant contestant)
+        {
+            foreach (KeyValuePair<int, Contestant> pair in contestants)
             {
-                foreach (KeyValuePair<int, Contestant> pair in contestants)
-                {
-                    Console.WriteLine(pair.Key + "" + pair.Value);
-                }
+                Console.WriteLine(pair.Key + "" + pair.Value);
             }
+        }
 
     }
 }

@@ -17,5 +17,20 @@ namespace SweepstakesMGMT
         {
             return sweepstakesStack.Pop();
         }
+
+        void ISweepstakesManager.InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+            throw new NotImplementedException();
+        }
+
+        Sweepstakes ISweepstakesManager.GetSweepstakes()
+        {
+            throw new NotImplementedException();
+        }
+
+        void ISweepstakesManager.InsertSweepstakes(object p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -17,6 +17,7 @@ namespace SweepstakesMGMT
             public string sweepstakesName;
 
             private object UserInterface;
+            private object contestants;
             int contestantCount;
             //dictionary.Add();
 
@@ -43,12 +44,12 @@ namespace SweepstakesMGMT
                 return contestant;
             }
 
-            void RegisterContestant(Contestant contestant)
+            private void RegisterContestant(Contestant contestant)
             {
                 contestants.Add(contestant.registrationNumber, contestant);
             }
 
-            string PickWinner()
+            public string PickWinner()
             {
                 int winningContestant = random.Next(1, contestantCount);
                 Contestant contestant;
@@ -56,10 +57,13 @@ namespace SweepstakesMGMT
                 return $"{contestant.firstName} {contestant.lastName}";
             }
 
-        //void PrintContestantInfo(Contestant contestant)
-        //{
-
-        //}
+            public void PrintContestantInfo(Contestant contestant)
+            {
+                foreach (KeyValuePair<int, Contestant> pair in contestants)
+                {
+                    Console.WriteLine(pair.Key + "" + pair.Value);
+                }
+            }
 
     }
 }

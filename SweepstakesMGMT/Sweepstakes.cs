@@ -7,19 +7,18 @@ namespace SweepstakesMGMT
 {
     public class Sweepstakes
     {
-        int RegisterContestant;
-        int PickWinner;
-        int PrintContestantInfo;
+        //int RegisterContestant;
+        //int PickWinner;
+        //int PrintContestantInfo;
         
         Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
             
         public string sweepstakesName;
         Random random;
-        private object UserInterface;
+        public object UserInterface;
         //int contestants;
         int contestantCount;
-               
-            
+
         public Sweepstakes(string sweepstakesName)
         {
             this.sweepstakesName = sweepstakesName;
@@ -43,7 +42,7 @@ namespace SweepstakesMGMT
             contestants.Add(contestant.registrationNumber, contestant);
         }
 
-        public string PickWinner()
+        string PickWinner()
         {
             int winningContestant = random.Next(1, contestantCount);
             Contestant contestant;
@@ -51,7 +50,7 @@ namespace SweepstakesMGMT
             return $"{contestant.firstName} {contestant.lastName}";
         }
 
-        public void PrintContestantInfo(Contestant contestant)
+        void PrintContestantInfo(Contestant contestant)
         {
             foreach (KeyValuePair<int, Contestant> pair in contestants)
             {

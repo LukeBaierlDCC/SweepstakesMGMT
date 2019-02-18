@@ -13,17 +13,29 @@ namespace SweepstakesMGMT
         public ISweepstakesManager ()//ISweepstakesManager
         {
             Dictionary<int, string> dictionary = new Dictionary<int, string>();
+            public string sweepstakesName;
+
+            private object UserInterface;
+            int contestantCount;
             //dictionary.Add();
 
-            foreach (KeyValuePair<int, string> kvp in dictionary)
+            //foreach (KeyValuePair<int, string> kvp in dictionary)
+            //{
+            //    Console.WriteLine(kvp.Key.ToString() + " - " + kvp.Value.ToString());
+            //}
+
+            public Sweepstakes(string sweepstakesName)
             {
-                Console.WriteLine(kvp.Key.ToString() + " - " + kvp.Value.ToString());
+                this.sweepstakesName = sweepstakesName;
+                
+                contestantCount = 0;
             }
 
-            //Sweepstakes(string name) 
-            //{
-
-            //}
+            public Contestant CreateContestant()
+            {
+                string firstName = UserInterface.GetFirstName();
+                string lastName = UserInterface.GetLastName();
+            }
 
             //void RegisterContestant(Contestant contestant)
             //{

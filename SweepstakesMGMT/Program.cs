@@ -31,6 +31,24 @@ namespace SweepstakesMGMT
                 RunSweepStakes(stackManager);
                 Console.WriteLine();
             }
+            Console.ReadLine();
         }
+
+        private static void RunSweepStakes(SweepstakesStackManager stackManager)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void RunSweepStakes(ISweepstakesStackManager sweepstakesManager)
+        {
+            Sweepstakes sweepstakes = sweepstakesManager.GetSweepstakes();
+            Console.WriteLine($"Announcing the winner of {sweepstakes.sweepstakesName} is: ");
+
+            string winner = sweepstakes.PickWinner();
+            Console.WriteLine(winner);
+            Console.ReadLine();
+        }
+
+
     }
 }

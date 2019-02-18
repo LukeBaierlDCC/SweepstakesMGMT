@@ -43,20 +43,23 @@ namespace SweepstakesMGMT
                 return contestant;
             }
 
-            //void RegisterContestant(Contestant contestant)
-            //{
+            void RegisterContestant(Contestant contestant)
+            {
+                contestants.Add(contestant.registrationNumber, contestant);
+            }
 
-            //}
+            string PickWinner()
+            {
+                int winningContestant = random.Next(1, contestantCount);
+                Contestant contestant;
+                contestants.TryGetValue(winningContestant, out contestant);
+                return $"{contestant.firstName} {contestant.lastName}";
+            }
 
-            //string PickWinner()
-            //{
+        //void PrintContestantInfo(Contestant contestant)
+        //{
 
-            //}
-
-            //void PrintContestantInfo(Contestant contestant)
-            //{
-
-            //}
+        //}
 
     }
 }

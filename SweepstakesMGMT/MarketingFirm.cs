@@ -15,7 +15,7 @@ namespace SweepstakesMGMT
             this.sweepstakesManager = sweepstakesManager;
         }
 
-        public Sweepstakes GetSweepstakes()
+        public _Sweepstakes GetSweepstakes()
         {
             return sweepstakesManager.GetSweepstakes();
         }
@@ -25,7 +25,7 @@ namespace SweepstakesMGMT
             sweepstakesManager.InsertSweepstakes(CreateSweepstakes());
         }
 
-        private Sweepstakes CreateSweepstakes()
+        private _Sweepstakes CreateSweepstakes()
         {
             throw new NotImplementedException();
         }

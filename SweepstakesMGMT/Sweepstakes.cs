@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SweepstakesMGMT
 {
-    public class Sweepstakes
+    public class _Sweepstakes
     {
         //int RegisterContestant;
         //int PickWinner;
@@ -15,11 +15,11 @@ namespace SweepstakesMGMT
             
         public string sweepstakesName;
         Random random;
-        public object UserInterface;
+        public object Userinterface;
         //int contestants;
         int contestantCount;
 
-        public Sweepstakes(string sweepstakesName)
+        public _Sweepstakes(string sweepstakesName)
         {
             this.sweepstakesName = sweepstakesName;
             random = new Random();
@@ -28,9 +28,9 @@ namespace SweepstakesMGMT
 
         public Contestant CreateContestant()
         {
-            string firstName = UserInterface.GetFirstName();
-            string lastName = UserInterface.GetLastName();
-            string emailAddress = UserInterface.GetEmailAddress();
+            string firstName = Userinterface.GetFirstName();
+            string lastName = Userinterface.GetLastName();
+            string emailAddress = Userinterface.GetEmailAddress();
             contestantCount++;
 
             Contestant contestant = new Contestant(firstName, lastName, emailAddress, contestantCount);
@@ -42,7 +42,7 @@ namespace SweepstakesMGMT
             contestants.Add(contestant.registrationNumber, contestant);
         }
 
-        string PickWinner()
+        public string PickWinner()
         {
             int winningContestant = random.Next(1, contestantCount);
             Contestant contestant;
@@ -50,13 +50,12 @@ namespace SweepstakesMGMT
             return $"{contestant.firstName} {contestant.lastName}";
         }
 
-        void PrintContestantInfo(Contestant contestant)
+        public void PrintContestantInfo(Contestant contestant)
         {
             foreach (KeyValuePair<int, Contestant> pair in contestants)
             {
                 Console.WriteLine(pair.Key + "" + pair.Value);
             }
         }
-
     }
 }

@@ -38,9 +38,9 @@ namespace SweepstakesMGMT
             return managerType;
         }
 
-        Sweepstakes CreateSweepstakes()
+        _Sweepstakes CreateSweepstakes()
         {
-            Sweepstakes newSweepstakes = new Sweepstakes();
+            _Sweepstakes newSweepstakes = new _Sweepstakes();
             return newSweepstakes;
         }
 

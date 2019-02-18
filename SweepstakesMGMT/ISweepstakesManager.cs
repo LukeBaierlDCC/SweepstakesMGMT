@@ -7,8 +7,8 @@ namespace SweepstakesMGMT
 {
     public interface ISweepstakesManager
     {
-        void InsertSweepstakes(Sweepstakes sweepstakes);
-        Sweepstakes GetSweepstakes();
+        void InsertSweepstakes(_Sweepstakes sweepstakes);
+        _Sweepstakes GetSweepstakes();
         void InsertSweepstakes(object p);
     }
 }

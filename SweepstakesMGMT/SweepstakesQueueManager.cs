@@ -7,23 +7,24 @@ namespace SweepstakesMGMT
 {
     public class SweepstakesQueueManager : ISweepstakesManager
     {
-        Queue<Sweepstakes> sweepstakesQueue = new Queue<Sweepstakes>();
+        Queue<_Sweepstakes> sweepstakesQueue = new Queue<_Sweepstakes>();
 
-        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        public void InsertSweepstakes(_Sweepstakes sweepstakes)
         {
             sweepstakesQueue.Enqueue(sweepstakes);
         }
 
-        public Sweepstakes GetSweepstakes()
+        public _Sweepstakes GetSweepstakes()
         {
+            _Sweepstakes sweepstakesQueueStart = sweepstakesQueue.Dequeue();
             return sweepstakesQueue.Dequeue();
         }
-        Sweepstakes ISweepstakesManager.GetSweepstakes()
+        _Sweepstakes ISweepstakesManager.GetSweepstakes()
         {
             throw new NotImplementedException();
         }
 
-        void ISweepstakesManager.InsertSweepstakes(Sweepstakes sweepstakes)
+        void ISweepstakesManager.InsertSweepstakes(_Sweepstakes sweepstakes)
         {
             throw new NotImplementedException();
         }

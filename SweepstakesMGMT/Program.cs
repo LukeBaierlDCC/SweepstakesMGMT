@@ -15,7 +15,7 @@ namespace SweepstakesMGMT
             SweepstakesStackManager stackManager = new SweepstakesStackManager();
             SweepstakesQueueManager queueManager = new SweepstakesQueueManager();
 
-            Sweepstakes sweepstakes = new Sweepstakes("You may qualify for a $10,000 reward!");
+            _Sweepstakes sweepstakes = new _Sweepstakes("You may qualify for a $10,000 reward!");
             queueManager.InsertSweepstakes(sweepstakes);
             stackManager.InsertSweepstakes(sweepstakes);
             Console.WriteLine("For your chance to win, please enter and submit your information.");
@@ -41,8 +41,8 @@ namespace SweepstakesMGMT
 
         private static void RunSweepStakes(ISweepstakesStackManager sweepstakesManager)
         {
-            Sweepstakes sweepstakes = sweepstakesManager.GetSweepstakes();
-            Console.WriteLine($"Announcing the winner of {sweepstakes.sweepstakesName} is: ");
+            _Sweepstakes sweepstakes = sweepstakesManager.GetSweepstakes();
+            Console.WriteLine($"The winner of {sweepstakes.sweepstakesName} is: ");
 
             string winner = sweepstakes.PickWinner();
             Console.WriteLine(winner);

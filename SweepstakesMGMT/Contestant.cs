@@ -7,8 +7,6 @@ namespace SweepstakesMGMT
 {
     class Contestant : Program
     {
-        //first name, last name, email address and registration number
-
         public string firstName;
         public string lastName;
         public string emailAddress;
@@ -21,5 +19,32 @@ namespace SweepstakesMGMT
             emailAddress = GetEmailAddress();
             registrationNumber = GetRegistrationNumber();
         }
+        public Contestant(string firstName, string lastName, string emailAddress, int contestantCount)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.emailAddress = emailAddress;
+        }
+
+        private int GetRegistrationNumber()
+        {
+            throw new NotImplementedException();
+        }
+
+        private string GetEmailAddress()
+        {
+            throw new NotImplementedException();
+        }
+
+        private string GetLastName()
+        {
+            throw new NotImplementedException();
+        }
+
+        private string GetFirstName()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

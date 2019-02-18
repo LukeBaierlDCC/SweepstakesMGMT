@@ -7,23 +7,23 @@ namespace SweepstakesMGMT
 {
     public class SweepstakesStackManager : ISweepstakesManager
     {
-        Stack<Sweepstakes> sweepstakesStack = new Stack<Sweepstakes>();
-        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        Stack<_Sweepstakes> sweepstakesStack = new Stack<_Sweepstakes>();
+        public void InsertSweepstakes(_Sweepstakes sweepstakes)
         {
             sweepstakesStack.Push(sweepstakes);
         }
 
-        public Sweepstakes GetSweepstakes()
+        public _Sweepstakes GetSweepstakes()
         {
             return sweepstakesStack.Pop();
         }
 
-        void ISweepstakesManager.InsertSweepstakes(Sweepstakes sweepstakes)
+        void ISweepstakesManager.InsertSweepstakes(_Sweepstakes sweepstakes)
         {
             throw new NotImplementedException();
         }
 
-        Sweepstakes ISweepstakesManager.GetSweepstakes()
+        _Sweepstakes ISweepstakesManager.GetSweepstakes()
         {
             throw new NotImplementedException();
         }

@@ -12,25 +12,24 @@ namespace SweepstakesMGMT
 
         static void Main(string[] args)
         {
+            SweepstakesStackManager stackManager = new SweepstakesStackManager();
+            SweepstakesQueueManager queueManager = new SweepstakesQueueManager();
 
-            while (true)
+            Sweepstakes sweepstakes = new Sweepstakes("You may qualify for a $10,000 reward!");
+            queueManager.InsertSweepstakes(sweepstakes);
+            stackManager.InsertSweepstakes(sweepstakes);
+            Console.WriteLine("For your chance to win, please enter and submit your information.");
+            Console.ReadLine();
+            Contestant contestant = sweepstakes.CreateContestant();
+            sweepstakes.RegisterContestant(contestant);
+            sweepstakes.CreateContestant();
+            
+            for (int i = 0; i < 3; i++)
             {
-                SweepstakesFactory sweepstakesFactory = new SweepstakesFactory();
-                MarketingFirm newFirm = new MarketingFirm(sweepstakesFactory.DetermineManager(GetManagerType));
-                newFirm.DetermineMarketFirmAction();
-            }
- 
-        }
-
-        private class SweepstakesFactory
-        {
-            public SweepstakesFactory()
-            {
-            }
-
-            internal ISweepstakesManager DetermineManager(object getManagerType)
-            {
-                throw new NotImplementedException();
+                Console.WriteLine(sweepstakes.sweepstakesName);
+                Console.WriteLine("Queue Manager: ");
+                RunSweepStakes(stackManager);
+                Console.WriteLine();
             }
         }
     }

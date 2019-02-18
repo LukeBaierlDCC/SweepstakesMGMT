@@ -10,9 +10,26 @@ namespace SweepstakesMGMT
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("");
-            Console.ReadKey();
+
+            while (true)
+            {
+                SweepstakesFactory sweepstakesFactory = new SweepstakesFactory();
+                MarketingFirm newFirm = new MarketingFirm(sweepstakesFactory.DetermineManager(UserInterface.GetManagerType));
+                newFirm.DetermineMarketFirmAction();
+            }
  
+        }
+
+        private class SweepstakesFactory
+        {
+            public SweepstakesFactory()
+            {
+            }
+
+            internal ISweepstakesManager DetermineManager(object getManagerType)
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }

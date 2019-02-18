@@ -32,6 +32,12 @@ namespace SweepstakesMGMT
             return Console.ReadLine();
         }
 
+        public static string GetManagerType()
+        {
+            string managerType = GetUserInput("");
+            return managerType;
+        }
+
         public static Sweepstakes CreateSweepstakes()
         {
             Sweepstakes newSweepstakes = new Sweepstakes();

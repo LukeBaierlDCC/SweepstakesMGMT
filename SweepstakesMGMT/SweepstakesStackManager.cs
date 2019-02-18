@@ -5,14 +5,7 @@ using System.Text;
 
 namespace SweepstakesMGMT
 {
-    public class SweepstakesStackManager
+    public class SweepstakesStackManager : ISweepstakesManager
     {
-        public Sweepstakes Sweepstakes
-        {
-            get => default(Sweepstakes);
-            set
-            {
-            }
-        }
     }
 }

@@ -8,51 +8,53 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SweepstakesMGMT.Contestant">
-    <Position X="0.5" Y="1.75" Width="1.5" />
+    <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAACAABACAAAAAA=</HashCode>
       <FileName>Contestant.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SweepstakesMGMT.MarketingFirm">
-    <Position X="3.25" Y="2" Width="1.5" />
+    <Position X="3" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAQAAABAAAAAIAAAQAAAAAAAAEAAAAA=</HashCode>
       <FileName>MarketingFirm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SweepstakesMGMT.SweepstakesStackManager">
-    <Position X="5.5" Y="3" Width="1.5" />
+    <Position X="5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SweepstakesStackManager.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SweepstakesMGMT.SweepstakesQueueManager">
-    <Position X="7.5" Y="3" Width="1.5" />
+    <Position X="8.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SweepstakesQueueManager.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SweepstakesMGMT.Sweepstakes">
-    <Position X="6.5" Y="1.75" Width="1.5" />
+    <Position X="6.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAAAAAABAAAAABAAAAAAAAAAACAAAAAAAAQQAAAIAAA=</HashCode>
       <FileName>Sweepstakes.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="SweepstakesMGMT.UserInterface">
     <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAAAAAAAAAAABAAAAAAAAAgAAAAAQAAAAAAAAEACAAA=</HashCode>
       <FileName>UserInterface.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SweepstakesMGMT.ISweepstakesManager">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAQAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ISweepstakesManager.cs</FileName>
     </TypeIdentifier>
   </Interface>

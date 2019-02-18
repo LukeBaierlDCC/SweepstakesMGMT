@@ -8,13 +8,15 @@ namespace SweepstakesMGMT
 {
     class Program
     {
+        private static object GetManagerType;
+
         static void Main(string[] args)
         {
 
             while (true)
             {
                 SweepstakesFactory sweepstakesFactory = new SweepstakesFactory();
-                MarketingFirm newFirm = new MarketingFirm(sweepstakesFactory.DetermineManager(UserInterface.GetManagerType));
+                MarketingFirm newFirm = new MarketingFirm(sweepstakesFactory.DetermineManager(GetManagerType));
                 newFirm.DetermineMarketFirmAction();
             }
  

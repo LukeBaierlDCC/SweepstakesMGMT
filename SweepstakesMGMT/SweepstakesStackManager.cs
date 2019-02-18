@@ -7,5 +7,6 @@ namespace SweepstakesMGMT
 {
     public class SweepstakesStackManager : ISweepstakesManager
     {
+
     }
 }

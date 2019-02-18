@@ -9,6 +9,6 @@ namespace SweepstakesMGMT
     {
         void InsertSweepstakes(Sweepstakes sweepstakes);
         Sweepstakes GetSweepstakes();
-        
+        void InsertSweepstakes(object p);
     }
 }

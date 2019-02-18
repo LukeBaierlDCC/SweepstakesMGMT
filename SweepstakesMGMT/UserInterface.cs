@@ -31,5 +31,11 @@ namespace SweepstakesMGMT
             Console.WriteLine("Enter the contestant's registration number here: ");
             return Console.ReadLine();
         }
+
+        public static string DetermineMarketingFirmAction()
+        {
+            string userInput = GetUserInput("");
+            return userInput;
+        }
     }
 }

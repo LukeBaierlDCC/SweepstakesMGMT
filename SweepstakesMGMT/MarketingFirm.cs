@@ -7,5 +7,12 @@ namespace SweepstakesMGMT
 {
     public class MarketingFirm
     {
+        public Contestant Contestant
+        {
+            get => default(Contestant);
+            set
+            {
+            }
+        }
     }
 }

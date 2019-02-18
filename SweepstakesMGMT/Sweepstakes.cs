@@ -7,5 +7,12 @@ namespace SweepstakesMGMT
 {
     public class Sweepstakes
     {
+        public ISweepstakesManager ISweepstakesManager
+        {
+            get => default(ISweepstakesManager);
+            set
+            {
+            }
+        }
     }
 }

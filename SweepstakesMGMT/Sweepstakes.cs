@@ -7,12 +7,16 @@ namespace SweepstakesMGMT
 {
     public class Sweepstakes
     {
-        public ISweepstakesManager ISweepstakesManager
+        public ISweepstakesManager //ISweepstakesManager
         {
-            get => default(ISweepstakesManager);
-            set
-            {
-            }
+            //Sweepstakes(string name)
+
+            //void RegisterContestant(Contestant contestant)
+
+            //string PickWinner()
+
+            //void PrintContestantInfo(Contestant contestant)
+
         }
     }
 }

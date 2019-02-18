@@ -8,45 +8,45 @@ namespace SweepstakesMGMT
     public interface UserInterface
     {
 
-        public static string GetFirstName()
+        string UserInterface.GetFirstName()
         {
             Console.WriteLine("Enter the contestant's first name here: ");
             return Console.ReadLine();
         }
 
-        public static string GetLastName()
+        string GetLastName()
         {
             Console.WriteLine("Enter the contestant's last name here: ");
             return Console.ReadLine();
         }
 
-        public static string GetEmailAddress()
+        string GetEmailAddress()
         {
             Console.WriteLine("Enter the contestant's email address here: ");
             return Console.ReadLine();
         }
 
-        public static string GetRegistrationNumber()
+        string GetRegistrationNumber()
         {
             Console.WriteLine("Enter the contestant's registration number here: ");
             return Console.ReadLine();
         }
 
-        public static string GetManagerType()
+        string GetManagerType()
         {
             string managerType = GetUserInput("");
             return managerType;
         }
 
-        public static Sweepstakes CreateSweepstakes()
+        Sweepstakes CreateSweepstakes()
         {
             Sweepstakes newSweepstakes = new Sweepstakes();
             return newSweepstakes;
         }
 
-        public static string DetermineMarketingFirmAction()
+        string DetermineMarketingFirmAction()
         {
-            string userInput = GetUserInput("");
+            userInput = GetUserInput("");
             return userInput;
         }
     }

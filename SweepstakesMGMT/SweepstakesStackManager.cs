@@ -7,6 +7,11 @@ namespace SweepstakesMGMT
 {
     public class SweepstakesStackManager : ISweepstakesManager
     {
+        Stack<Sweepstakes> sweepstakesStack = new Stack<Sweepstakes>();
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+            sweepstakesStack.Push(sweepstakes);
+        }
 
     }
 }
